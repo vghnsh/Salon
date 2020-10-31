@@ -8,11 +8,19 @@ import {Button, IconButton} from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+  
+  
 
-
+toast.configure()
 function App() {
   const [user,setUser] = useState([]);
   const [number, setNumber] = useState([]);
+
+
+  
+   
 
   const signOut=(event)=>{
     event.preventDefault();
@@ -27,12 +35,15 @@ function App() {
     db.collection('salon').doc('dSs4KJF6t4xN5KVAaaOI').set({
       waiting:  number + 1
     });
+    toast("Waiting Increased by 1",{position:toast.POSITION.BOTTOM_RIGHT ,autoClose: 2500});
   }
 
   function down(){
     db.collection('salon').doc('dSs4KJF6t4xN5KVAaaOI').set({
       waiting:  number - 1
     });
+    toast("Waiting Decreased by 1",{position:toast.POSITION.BOTTOM_RIGHT,autoClose: 2500});
+  
   }
  
 
@@ -55,6 +66,8 @@ function App() {
     };
     
   },[number]);
+
+  
 
   return (
     
@@ -123,7 +136,7 @@ function App() {
                   <ExpandLessIcon />
                   </IconButton>
 
-                  <IconButton disabled={number < 1} onClick={down}>
+                  <IconButton disabled={number < 1} onClick={down} >
                   <ExpandMoreIcon />
                   </IconButton>
                 
