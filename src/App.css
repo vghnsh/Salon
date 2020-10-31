@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+}
+.name {
+  font-family: "Patua One", cursive;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em 0 2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.size {
+  font-size: xx-large;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sizeW {
+  font-size: xxx-large;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sizeW_number {
+  font-size: 5em;
+}
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
+.login {
+  display: flex;
+  justify-content: flex-end;
+}
+.content {
+  margin-top: 15em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.c1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.main {
+  height: 30em;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.number {
+  font-size: xx-large;
+  display: flex;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.change {
+  display: flex;
+  flex-direction: column;
+  color: #111;
+}
+.fade_bot {
+  height: 12.5rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
 }
