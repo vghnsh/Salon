@@ -31,6 +31,15 @@
   margin-top: 15em;
   display: flex;
   flex-direction: column;
+
+  transition: box-shadow 0.3s;
+
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0.7em;
+}
+.content:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.9);
 }
 .c1 {
   display: flex;
